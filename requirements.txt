@@ -1,0 +1,4 @@
+flask
+ibm-watson
+python-dotenv
+ibm-cloudant
