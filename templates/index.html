@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>News Classifier</h1>
+    <form id="newsForm">
+        <textarea name="news" rows="10" cols="80" placeholder="Paste news article here..."></textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        const form = document.getElementById('newsForm');
+        const results = document.getElementById('results');
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch('/analyze', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            results.innerHTML = `
+                <h2>Sentiment: ${data.sentiment.document.label}</h2>
+                <h3>Top Categories:</h3>
+                <ul>${data.categories.map(c => `<li>${c.label}</li>`).join('')}</ul>
+                <h3>Keywords:</h3>
+                <ul>${data.keywords.map(k => `<li>${k.text}</li>`).join('')}</ul>
+            `;
+        }
+    </script>
+</body>
+</html>
