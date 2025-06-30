@@ -1,0 +1,7 @@
+NLU_APIKEY=_rnn0zIAICBowoMnXs_qPuMBISuPxh3qA26fYgqFoqOA
+NLU_URL= https://api.au-syd.natural-language-understanding.watson.cloud.ibm.com/instances/a55ae791-713a-4d31-90b6-7520779b7aad
+
+CLOUDANT_URL=https://7fa38a0f-e7f6-4baf-ac15-3ddcf3a92720-bluemix.cloudantnosqldb.appdomain.cloud
+CLOUDANT_APIKEY=fML8dI1Sm_nAjR1eJuv68amFwiNh7krZMYKPomL1S5Xl
+CLOUDANT_USERNAME=7fa38a0f-e7f6-4baf-ac15-3ddcf3a92720-bluemix
+CLOUDANT_DB=news_analysis
