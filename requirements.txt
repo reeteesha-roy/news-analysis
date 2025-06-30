@@ -1,4 +1,6 @@
 flask
-ibm-watson
 python-dotenv
-ibm-cloudant
+ibm-watson
+ibm-cloud-sdk-core
+cloudant
+gunicorn
